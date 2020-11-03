@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+  .affix{
+  	top: 0;
+  	width: 100%;
+
+  }
+  .affix + .container-fluid{
+  	padding-top: 70px;
+  }
+ </style>
+</head>
+<body>
+	<div class="container-fluid" style="background-color: #3e4;color: #fff;height: 200px;">
+		<h1>Indian Railwal</h1>
+	</div>
+
+	<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">IRCTC</a></li>
+			<li><a href="booking.html">Page 1</a></li>
+			<li><a href="booking1.html">Page 2</a></li>
+		</ul>
+	</nav>
+
+		<div class="container-fluid" style="height: 1000px">
+			<table class="table table-border" style="background-color: orange">
+				<thead>
+					<tr>
+						<th>Check Train</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>
+							Train Name:<input type="text" name="name"><br><br>
+							Arrival station:<input type="text" name="arrival"><br><br>
+							Departure station:<input type="text" name="departure"><br><br>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill Name">Name :</span>
+						    <input type="text" name="name"><br><br>
+						    <span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill age">Age:</span>
+						    <input type="text" name="email"><br><br>
+						    <span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill number">Contact No:</span>
+						    <input type="text" name="number"><br><br>
+						    <span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill seats">Seats:</span>
+						    <input type="text" name="number"><br><br>
+						    
+						     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			                   <span class="badge badge-pill badge-success">Submit</span>
+		                     </button>
+
+		                <div class="modal fade" id="myModal">
+			                <div class="modal-dialog modal-dialog-centered modal-sm">
+				                <div class="modal-content">
+					              <div class="modal-header">
+						            <h4 class="modal-title">Submitted</h4>
+						            <button type="button" class="close" data-desmiss="modal">&times;</button>
+					              </div>
+
+					              <div class="modal-body">
+						             Your form is submitted
+						             <div class="alert alert-success alert-desmissible">
+			                           <button type="button" class="close" data-dismiss="alert">&times;</button>
+			                           <b>Success!</b>
+		                             </div>
+					              </div>
+
+					              <div class="modal-footer">
+						            <button type="button" class="btn btn-danger" data-desmiss="modal">Close</button>
+					              </div>
+				                </div>
+			                </div>
+		                </div>
+						</th>
+					</tr>
+		        </tbody>
+		    </table>
+		    <ul class="pagination pagination-sm justify-content-center">
+				<li class="page-item"><a class="page-link" href="PNR.html">Previous</a></li>
+				<li class="page-item active"><a class="page-link" href="booking.html">1</a></li>
+				<li class="page-item"><a class="page-link" href="booking1.html">2</a></li>
+				<li class="page-item"><a class="page-link" href="booking.html">Next</a></li>
+		    </ul>
+		</div>
+		<script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
+
+
+</body>
+</html>

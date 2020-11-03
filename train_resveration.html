@@ -1,0 +1,163 @@
+<! DOCTYPE HTML>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1><center>WLCOME TO INDIAN RAILWAY</center></h1>
+		<ul class="nav nav-tabs bg-info">
+			<li class="nav-item">
+				<a class="nav-link" href="Train.html">Train</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="PNR.html">PNR NO:</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="IRCT.html">IRCTC</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="Contact_rail.html">Contact</a>
+			</li>
+			<span class="glyphicon glyphicon-envelope"></span>
+			<li class="nav-item">
+				<a class="nav-link" href="Search.html">Search</a>
+			</li>
+		</ul>
+		<header style="background-color: red">
+			<p style="text-align: center;">RAIL RESERVATION SYSTEM</p>
+		</header>
+		<div style="background-image:url('rail1.jpg');">
+			<table class="table bg-danger">
+				<thead>
+					<td><h2><center>Ticket Form</center></h2></td>
+				</thead>
+			<tr>
+				<td><span class="label label-primary">Train Detail</span></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">PNR No:</span></td>
+				<td><input type="text" name="pnr"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Arrival Station:</span></td>
+				<td><input type="text" name="starting"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Departure Station:</span></td>
+				<td><input type="text" name="ending"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Train No:</span></td>
+				<td><input type="text" name="train"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Train Name:</span></td>
+				<td><input type="text" name="pnr"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Ticket Price:</span></td>
+				<td><input type="text" name="pnr"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Journey Date:</span></td>
+				<td><input type="date" name="journey"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">No.of Seats:</span></td>
+				<td><input type="text" name="number"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Total Price</span></td>
+				<td><input type="text" name="price"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Payment Option:</span></td><br>
+				<td> 
+					<input type="radio" name="payment" value="cc" />Credit Card <br />
+                   <input type="radio" name="payment" value="dc" />Debit card <br /> 
+                   <input type="radio" name="payment" value="wallet">wallet<br/>
+          </td><br><br>
+			</tr>
+			<tr>
+				<td><span class="label label-primary">Customer Detail</span></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Customer Name:</span></td>
+				<td><input type="text" name="name"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Address:</span></td>
+				<td><input type="text" name="address"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Phone</span></td>
+				<td><input type="tel" id="phone" name="phone"></td>
+			</tr><br>
+			<tr>
+				<td><span class="label label-info">Email:</span></td>
+				<td><input type="email" id="email" name="email"></td>
+			</tr><br>
+			<tr>
+			<td><button type="button" class="btn btn-primary" title="Submit"  data-toggle="popover" data-placement="top"  data-content="sucess">Submit</button></td>
+			<td><button type="button" class="btn btn-primary" title="Cancel"  data-toggle="popover" data-placement="top"  data-content="sucess">Cancelled</button></td>
+		</tr>
+		</table>
+
+		</div>
+		<table class="table table-border">
+			<thead class="bg-primary">
+				<td><h3>Ticket Confirmation</h3></td>
+				<tr>
+					<th>PNR No:</th>
+					<th>Train No:</th>
+					<th>Train Name</th>
+					<th>Journey Date</th>
+					<th>No of Passnger</th>
+					<th>Class</th>
+					<th>Departure Station</th>
+					<th>Arrival Station</th>
+					<th>Arrival Time</th>
+				</tr>
+			</thead>
+			<tbody class="bg-danger">
+				<tr>
+					<th>12524:</th>
+					<th>12422:</th>
+					<th>Saheed Express</th>
+					<th>25-June-2020</th>
+					<th>1</th>
+					<th>3A</th>
+					<th>Jalandhar City</th>
+					<th>Ghorakhpur Jn.</th>
+					<th>21:00 IST</th>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="pagination pagination-sm justify-content-center">
+			<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+			<li class="page-item active"><a class="page-link" href="Train.html">1</a></li>
+			<li class="page-item"><a class="page-link" href="PNR.html">2</a></li>
+			<li class="page-item"><a class="page-link" href="Train.html">Next</a></li>
+		</ul>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="Train.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="PNR.html">PNR NO:</a></li>
+			<li class="breadcrumb-item"><a href="#">IRCTC</a></li>
+			<li class="breadcrumb-item"><a href="Contact_rail.html">Contact</a></li>
+		</ul>
+
+	</div>
+	<script>
+    	$(document).ready(function(){
+    		$('[data-toggle="popover"]').popover();
+    	});
+    </script>
+</body>
+</html>

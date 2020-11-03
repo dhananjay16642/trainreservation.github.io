@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<center>
+		<table class="table table-border" style="background-color: pink; width: 500px; height: 500px;">
+			<thead>
+				<tr>
+					<th>Book Your Ticket</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>
+						<input type="text" name="name" value="From*"><br><br>
+						<input type="text" name="name" value="To*"><br><br>
+						<input type="date" name="date" value="Date"><br><br>
+						<input type="text" name="class" list="classname">
+						<datalist id="classname">
+							<option value="1A">
+                            <option value="2A">
+                            <option value="3A">
+                            <option value="2S">
+                            <option value="SL">
+                        </datalist>
+                    </th>
+                </tr>
+                <tr>
+                	<td>
+                		<input type="checkbox" name="chck">
+                		<span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Fill Name">Flxiable with Date</span><br><br>
+                		<input type="checkbox" name="chck">
+                		<span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Fill Name">Divyaang Concession</span><br><br>
+                		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			              <span class="badge badge-pill badge-success">Submit</span>
+		                </button>
+
+		                <div class="modal fade" id="myModal">
+			                <div class="modal-dialog modal-dialog-centered modal-sm">
+				                <div class="modal-content">
+					              <div class="modal-header">
+						            <h4 class="modal-title">Submitted</h4>
+						            <button type="button" class="close" data-desmiss="modal">&times;</button>
+					              </div>
+
+					              <div class="modal-body">
+						             Your form is submitted
+						             <div class="alert alert-success alert-desmissible">
+			                           <button type="button" class="close" data-dismiss="alert">&times;</button>
+			                           <b>Success!</b>
+		                             </div>
+					              </div>
+
+					              <div class="modal-footer">
+						            <button type="button" class="btn btn-danger" data-desmiss="modal">Close</button>
+					              </div>
+				                </div>
+			                </div>
+		                </div>
+		             </td>
+
+				</tr>
+			</tbody>
+		</table>
+	</center>
+	</div>
+	<script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+<style>
+/* css for typehead dropdown --- start*/
+.tt-query {
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+color: #999
+}
+.tt-menu { 
+</style>
+</head>
+<body class="bg-scondary">
+<h2>Search Train</h2>
+
+<div id="the-basics">
+<input class="typeahead" type="text" placeholder="search">
+</div>
+
+<script>
+var substringMatcher = function(strs) {
+return function findMatches(q, cb) {
+var matches, substringRegex;
+
+matches = [];
+
+substrRegex = new RegExp(q, 'i');
+
+$.each(strs, function(i, str) {
+if (substrRegex.test(str)) {
+matches.push(str);
+}
+});
+
+cb(matches);
+};
+};
+
+var states = ['GaribRath','GhorakhapurExp','ANVTHumsafar','Satapdi','RajdhaniExp','BibkExp','SaheedExp'
+];
+
+$('#the-basics .typeahead').typeahead({
+hint: true,
+highlight: true,
+minLength: 1
+},
+{
+name: 'states',
+source: substringMatcher(states)
+});</script>
+</body>
+</html>

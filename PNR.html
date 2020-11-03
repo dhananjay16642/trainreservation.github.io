@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: pink">
+    <div class="container">
+    	<h2>Train Status</h2>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			Click to check PNR
+		</button>
+
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog modal-dialog-centered modal-sm">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<h4 class="modal-title">Check PNR</h4>
+						<button type="button" class="close" data-desmiss="modal">&times;</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="alert alert-success alert-desmissible">
+			                <button type="button" class="close" data-dismiss="alert">&times;</button>
+			                <b>Enter Train No!</b>
+		                </div>
+						Enter Your PNR NO:
+						<input type="text" name="number">
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-desmiss="modal"><span class="glyphicon glyphicon-search"></span>Find PNR Status</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<h3>Find Seats</h3>
+		<input type="text" name="name" value="From"><br><br>
+		<input type="text" name="name" value="To"><br><br>
+		<input type="date" name="days" value="Journey Date"><br><br>
+		<input type="text" name="class" value="Sleeper">
+		<button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Sleeper class">SL<span class="badge badge-success">5</span></button><br><br>
+		<input type="text" name="class" value="General Quota">
+		<button type="button" class="btn btn-primary" title="Quota" data-toggle="popover" data-placement="right" data-content="General">GN<span class="badge badge-success">10</span></button><br><br>
+		<button type="button" class="btn btn-danger">Find Seat Availability</button><br><br>
+
+		<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#lpu">Notice</button>
+		<div id="lpu" class="collapse">
+			Indian Railway government announcd only Covid-19 Spcial train will running during lockdowwn.<br> All other train will stop as per other announcment. Thank You.
+		</div>
+
+	</div>
+
+	<script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+    	$(document).ready(function(){
+    		$('[data-toggle="popover"]').popover();
+    	});
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-border" style="background-color: orange">
+			<thead>
+				<tr>
+					<th>Contact Us</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>
+						<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill Name">Name :</span>
+						<input type="text" name="name"><br><br>
+						<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill email">Email:</span>
+						<input type="text" name="email"><br><br>
+						<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Fill number">Contact No:</span>
+						<input type="text" name="number"><br><br>
+						<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Write message"">Message:</span><br>
+						<textarea rows="4" cols="50" name="comment" form="usrform">
+                        </textarea><br>
+                        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Write message">Submit</button>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<a href="#" data-toggle="collapse" data-target="#lpu">Note:</a>
+		                  <div id="lpu" class="collapse">
+			               Please fill the detail to contact us
+		                  </div>
+					</th>
+				</tr>
+			</tbody>
+	</div>
+	<script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+</body>
+</html>
